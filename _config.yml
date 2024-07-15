@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Snakinya"
-description              : "He is a final year Undergraduate working on Network and Web security."
+description              : "He is a first year master working on Network and Web security."
 repository               : "RayeRen/acad-homepage.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Zhiwei Lin"
   avatar           : "images/head.png"
-  bio              : "Sichuan University"
+  bio              : "National University of Singapore"
   location         : "Singapore"
   employer         :
   pubmed           : 
