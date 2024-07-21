@@ -16,7 +16,7 @@ redirect_from:
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
 <span class='anchor' id='about-me'></span>
-I am currently a master student at National University of Singapore, advised by Prof.[Zhenkai Liang](https://www.comp.nus.edu.sg/~liangzk/). I am a core member of the CTF team 0x401.
+I am currently a Master candidate at National University of Singapore, advised by Prof.[Zhenkai Liang](https://www.comp.nus.edu.sg/~liangzk/). I am a core member of the CTF team 0x401.
 
 My research pursuits revolve around network security, with a primary focus on Content Delivery Network (CDN) security and protocol security. My current work aims to discover and solve the security risks posed by CDN forwarding request inconsistencies to build safer, better CDNs. My research results have received acknowledgements from well-known CDN vendors such as Cloudflare, Azure, Aliyun, Cachefly, Qiniu, and Upyun.
 
