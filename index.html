@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Zhiwei Lin「归青」</title>
+  <meta name="description" content="xianglin's homepage">
+  <meta name="author" content="Yang Xianglin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700|Lato:300,400,700|Roboto:300,400,700" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreenr.css" />
+  <!-- CSS Style Sheet -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  <!-- link rel="icon" type="image/png" href="images/favicon.png" -->
+  <script src="utl.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69465334-1"></script> -->
+  <!-- <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-69465334-1');
+  </script> -->
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="header" id="header">
+      <div class="row">
+        <div class="title-container">
+          <h5 class="title" id="title">
+            Zhiwei <u>Lin</u> 「归青」
+          </h5>
+        </div>
+        <!-- Navigation Bar Sub-pages -->
+        <div class="navbar-container">
+          <nav class="navbar" style="line-height: 3; float: right;">
+            <!-- <b>home</b>  -->
+            <!-- | -->
+            <a href="https://github.com/Snakinya" target="_blank" style="text-decoration: none; border: none;"> GitHub</a> |
+            <a href="https://www.snakin.top" target="_blank" style="text-decoration: none; border: none;">Blog</a>
+            <!-- <a href="papers.html">papers</a> -->
+            <!-- <a href="talks.html">talks</a> | -->
+            <!-- <a href="misc.html">gallery</a> -->
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="top placeholder"></div>
+
+    <div class="row">
+      <!--div class="eleven columns"-->
+      <div id="photo" style="	
+        width: 200px;
+        height: 200px;
+        background-size: 200px;
+        float: left;
+        margin: 20px 5px 0px 40px;"> 
+        <img src="src/zhiwei.jpg" width="150" height="150"></img>
+        <!-- width: 135px;
+        height: 187px; -->
+        <!-- background-image: url(src/photo.JPG); -->
+      </div>
+      
+      <p class="shortspan">
+        I'm now a Master candidate at National University of Singapore, advised by Prof.<a href="https://www.comp.nus.edu.sg/~liangzk/">Zhenkai Liang</a>. I received my Bachelor from Sichuan University in 2024.
+        I'm also a core member of the CTF team 0x401.
+        <br>
+        <br>
+        My research interest lies in AI for security, Network security, and program analysis. Recently I focus on vulnerability-related topics. 
+        <br>
+<!--         My research interests lie in robust and trustworthy machine learning techniques, emphasizing understanding, debugging, and ensuring the behavior of machine learning models; in particular, my work focuses on developing a visual interactive system that vividly depicts the internal evolution of deep neural networks, allowing for the inspection of ML pipelines and the identification of potential issues. -->
+        <br>
+        I am currently looking for a PhD position in 25 Fall.
+      </p>
+    </div>
+
+        <!-- <b>> My <a href='src/CV202105-ChangshengSun.pdf'>Curriculum Vitae</a> < </b> -->
+      
+      <!--/div-->
+    <!-- abstract button template -->
+    <span id="abs-btn-template" style="display:none;">
+      <span class="abs-btn" onclick="absButtonClick(this)">
+        <span class="abs-btn-border">[</span>
+        <span class="abs-btn-inner"><span class="abs-btn-text">abstract</span></span>
+        <span class="abs-btn-border"><span class="abs-btn-cross">+</span>]</span>
+      </span>
+    </span>
+
+    <!-- <a href="src/PhD_CV.pdf" class="paper-link" style="font-size:1.4rem; font-weight: 500;"> [CV]</a> |
+    <a href="https://scholar.google.com/citations?user=pSG3i44AAAAJ&hl=zh-CN" class="paper-link" style="font-size:1.4rem; font-weight: 500;"> [Google Scholar]</a> | 
+    <a href="https://github.com/xianglinyang" class="paper-link" style="font-size:1.4rem; font-weight: 500;"> [GitHub]</a> | 
+    <a href="https://www.linkedin.com/in/xianglin-yang-7946a1213/" class="paper-link" style="font-size:1.4rem; font-weight: 500;"> [LinkedIn]</a>
+     -->
+    <div class="row section" id="news">
+      <h5>NEWS</h5>
+      <div class="newslist">
+        <ul>
+          <!-- <li><span class="date">05/2024.</span> I become an MLE intern at ByteDance!</li>
+          <li><span class="date">01/2024.</span> I become a research intern at Lenovo working on AI Agent!</li>
+          <li><span class="date">11/2023.</span> I was honored to receive the Dean’s Graduate Award from NUS. Thanks Prof. Dong for the nomination and support!</li>
+          <li><span class="date">07/2023.</span> Our paper <span class="papername">DeepDebugger: An Interactive Time-Travelling Debugging Approach for Deep Classifiers</span> has been accepted to <b>ESEC/FSE 2023</b>!</li>
+          <li><span class="date">05/2023.</span> Our paper <span class="papername">Thompson Sampling with Less Exploration is Fast and Optimal</span> has been accepted to <b>ICML 2023</b>!</li>
+          <li><span class="date">09/2022.</span> Our paper <span class="papername">Debugging and Explaining Metric Learning Approaches: An Influence Function Based Perspective</span> has been accepted to <b>NeurIPS 2022</b>!</li>
+          <li><span class="date">04/2022.</span> Our paper <span class="papername">Temporality Spatialization: A Scalable and Faithful Time-Travelling Visualization for Deep Classifier Training</span> has been accepted to <b>IJCAI 2022</b>!</li>-->
+          <li><span class="date">04/2024.</span> Our paper <span class="papername">CDN Cannon: Exploiting CDN Back-to-Origin Strategies for Amplification Attacks</span> has been accepted to <b>USENIX 2024</b>!</li>
+          <!--<li><span class="date">02/2022.</span> Our paper <span class="papername">DeepVisualInsight: Time-Travelling Visualization for Spatio-Temporal Causality of Deep Classification Training</span> has been accepted to <b>AAAI22</b> with oral presentation (4%)!</li> -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="row section" id="papers">
+      <h5>PUBLICATIONS
+        <!-- <a href="https://dblp.org/pid/134/1902.html" class="paper-link" style="font-size:1.4rem; font-weight: 500;"> [dblp: Changsheng Sun]</a> -->
+      </h5>
+      <!-- </div> -->
+      <!-- <p class="footnote">
+        * Click the [+] button to show abstracts.
+      </p> -->
+      <!-- <div class="paperyear"> 2022 </div> -->
+      <!--             <span class="newicon">[new] </span> -->
+    
+      <div class="paperlist">
+        <ul>
+          <li>
+            <span class="papername">CDN Cannon: Exploiting CDN Back-to-Origin Strategies for Amplification Attacks. </span> <br/>
+            Ziyu Lin, <span class="myself"> Zhiwei Lin</span>, Ximeng Liu, Jianjun Chen, Run Guo, Cheng Chen, Shaodong Xiao. <br/>
+            <span class="confname">USENIX Security 2024.</span> <br/>
+            <a class="paper-link" href="https://www.usenix.org/system/files/usenixsecurity24-lin-ziyu.pdf">[paper]</a>
+          </li>
+          
+          
+        </ul>
+      </div>
+    </div>
+
+<!--     <div class="row section">
+      <div><h5>SERVICES</h5></div>
+      <ul>
+        <li>
+          program committee: ISACE2024
+        </li>
+      </ul>
+    </div>  -->
+
+    <div class="row section">
+      <div><h5>EXPERIENCE</h5></div>
+      <ul>
+        <li>
+          2024.5 - Present, <b>Research Assistant</b> @ Hong Kong University of Science and Technology<br/>
+        </li>
+        <li>
+          2024.5 - 2024.8, <b>Security Engineering Intern</b> @ Ant Group<br/>
+        </li>
+        <li>
+          2024.1 - 2024.5, <b>Research Intern</b> @ CURIOSITY at National university of Singapore<br/>
+        </li>
+        <li>
+          2023.08 - 2023.10, <b>Security Research Intern</b> @ QI-ANXIN Technology Company<br/>
+        </li>
+        <li>
+          2023.03 - 2023.10, <b>Research Intern</b> @ NISL at Tsinghua University<br/>
+        </li>
+
+      </ul>
+    </div> 
+    
+    <div class="row section">
+      <div><h5>EDUCATION</h5></div>
+      <ul>
+        <li>
+          2024.8 - Present, <b>Master candidate</b> @ NUS, School of Computing<br/>
+        </li>
+        <li>
+          2020.9 - 2024.7, <b>B.S.</b> @ Sichuan University, School of Cyber Space and Engineering<br/>
+        </li>
+        
+      </ul>
+    </div> 
+
+    <div class="row section">
+      <div><h5>AWARDS</h5></div>
+      <ul>
+        <li>
+          1st Prize - 2023 National College Student Information Security Contest (National Finals CTF)
+        </li>
+        <li>
+          3rd Prize - 2022 "Qiangwang Cup" National Cyber Security Contest (National Online Finals)
+        </li>
+        <li>
+          Champion - 2022 "Anxun Cup" CTF (National Finals)
+        </li>
+        <li>
+          3rd Prize - 2022 D^3CTF (International Finals)
+        </li>
+      </ul>
+    </div>
+
+      <!-- <div class="row section">
+        <div><h5>RESEARCH EXPERIENCES</h5></div>
+        <ul>
+          <li>
+            (Jul 2019 - Oct 2019) <b>Research Intern</b> @ NUS, Software Engineering lab<br/>
+            <i>Increase the test coverage of programs.</i>
+          </li>
+        </ul>
+      </div>  -->
+    
+    <div class="row section">
+        <div><h5>CONTACT</h5></div>
+        <p>
+          <!-- Computing 2, <br/>  
+          15 Computing Drive, 
+          National University of Singapore, <br/>
+          Singapore, 117418 <br/><br/> -->
+          Email: <a href="mailto:zhiweil@u.nus.edu">zhiweil@u.nus.edu</a>
+          <br/>
+        <!-- Mobile: See my cv.<br/>
+        Skype: Same as Outlook E-mail -->
+        </p>
+    </div>
+    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=100&t=n&d=wbIrZ2vYiWcwFehZ5-TSjhwabWqHCrDUTO_93juCE_4&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script>
+    <!-- <p class="footnote">© 2024 Zhiwei Lin | Powered by <a href="http://getskeleton.com/">Skeleton</a> and <a href="https://jgan.neocities.org/index.html">Jiarui Gan's template</a>  | Updated 2024-05-24 </p> -->
+  </div>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
