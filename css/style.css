@@ -25,6 +25,19 @@
 - Clearing
 - Media Queries
 */
+.section-title {
+
+  border-bottom: 2px dashed #aaa; /* 在标题下方添加虚线 */
+  padding-bottom: 5px; /* 增加虚线与标题之间的间距 */
+  margin-bottom: 20px; /* 增加标题与下方内容的间距 */
+}
+
+.subtitle {
+  display: block; /* 将文字放在新的一行 */
+  font-size: 0.8em; /* 调整字号，使其变小 */
+  color: #aa55ff; /* 可选：设置子标题的颜色，如灰色 */
+}
+
 
 
 /* Grid
@@ -34,7 +47,8 @@
     width: 85%;
     max-width: 800px;
     margin: 0 auto;
-    /*padding: 0 20px;*/
+    /* padding: 0 20px; */
+
     box-sizing: border-box; }
   
   .column,
@@ -135,7 +149,7 @@
     font-weight: 400;
     /* font-family: Lato, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", Helvetica; */
     color: #131111;
-    padding-bottom: 50vh;
+    padding-bottom: 10vh;
     margin: 0;
     background-color: #ffffff;
       /* 屏幕优化版 */
@@ -161,6 +175,7 @@
     float: left; }
   
   .title {
+
     margin-bottom: 0px;
     padding-top: 0.3rem;
     transition: 0.3s; }
@@ -191,6 +206,7 @@
     color: #8a8a8a;}
   
   .section{
+
     margin-top: 1.5rem;
     }
   
