@@ -1,5 +1,9 @@
-/* Minimal Academic Portfolio CSS */
-/* Reset and Base Styles */
+/* 
+ * Minimal Academic Portfolio
+ * 内容居中，两边留白，重要信息浅紫色标注
+ */
+
+/* === Reset === */
 * {
     margin: 0;
     padding: 0;
@@ -7,574 +11,381 @@
 }
 
 html {
-    scroll-behavior: smooth;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-family: 'IBM Plex Sans', -apple-system, system-ui, sans-serif;
     line-height: 1.6;
     color: #1a1a1a;
-    background-color: #ffffff;
-    font-feature-settings: 'liga' 1, 'kern' 1;
-    text-rendering: optimizeLegibility;
+    background: #fafafa;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
-.hero-name {
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
-    font-weight: 700;
-    line-height: 1.05;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.02em;
-    color: #0f172a;
-}
-
-.section-title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    color: #0f172a;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -0.5rem;
-    left: 0;
-    width: 2rem;
-    height: 0.125rem;
-    background: #3b82f6;
-    border-radius: 0.25rem;
-}
-
-.subsection-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #374151;
-}
-
-/* Container */
+/* === Layout - 内容在中间，两边自然留白 === */
 .container {
-    max-width: 1000px;
+    max-width: 50rem;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 3rem 3rem;  /* 明确指定左右padding相同 */
+    background: #ffffff;
 }
 
-/* Navigation */
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    z-index: 1000;
-    transition: all 0.3s ease;
+section {
+    padding: 0;
+    margin-bottom: 1.5rem;
 }
 
-.nav-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 3.5rem;
+/* 让内容区域有明显的中间感 */
+section .container {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
-.nav-brand {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #3b82f6;
-    text-decoration: none;
-    font-family: 'JetBrains Mono', monospace;
+/* === Typography === */
+.name {
+    font-family: 'IBM Plex Serif', Georgia, serif;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 0.375rem;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a {
+.affiliation {
+    font-size: 1rem;
     font-weight: 500;
-    color: #374151;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    position: relative;
+    color: #666;
 }
 
-.nav-links a:hover {
-    color: #3b82f6;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -0.5rem;
-    left: 0;
-    width: 0;
-    height: 0.125rem;
-    background: #3b82f6;
-    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-links a:hover::after {
+.bio {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: #333;
+    margin-top: 2rem;
     width: 100%;
 }
 
-/* Hero Section - Keep the beloved design */
-.hero {
-    padding: 5rem 0 3rem;
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    position: relative;
-    overflow: hidden;
+.bio p {
+    margin: 0 0 1rem 0;  /* 明确设置左右margin为0 */
+    padding: 0;
+    text-align: left;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e2e8f0" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
+.bio p:last-child {
+    margin-bottom: 0;
 }
 
-.hero-content {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 3rem;
-    align-items: center;
-    position: relative;
-    z-index: 1;
+.bio a {
+    color: #8b5cf6;
+    text-decoration: none;
+    border-bottom: 1px solid #c4b5fd;
+    transition: border-color 0.2s;
 }
 
-.hero-chinese {
-    display: block;
-    font-size: 0.6em;
-    font-weight: 400;
-    color: #6366f1;
-    margin-top: 0.5rem;
-    font-family: 'Inter', sans-serif;
+.bio a:hover {
+    border-bottom-color: #8b5cf6;
 }
 
-.hero-title {
+.bio strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.section-title {
+    font-family: 'IBM Plex Serif', Georgia, serif;
     font-size: 1.375rem;
     font-weight: 600;
-    color: #374151;
-    margin-bottom: 0.25rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+    color: #1a1a1a;
 }
 
-.hero-affiliation {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #3b82f6;
-    margin-bottom: 2rem;
+/* === Hero - 名字在左，照片在右 === */
+.hero .container {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 2.5rem;
 }
 
-.hero-quick-links {
+.hero-header {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 0;
+}
+
+.hero-info {
+    flex: 1;
+    min-width: 0;  /* 防止flex子项溢出 */
 }
 
 .profile-photo {
-    width: 220px;
-    height: 220px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #ffffff;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 3px solid #f5f3ff;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+    flex-shrink: 0;
 }
 
-.profile-photo-large {
-    width: 260px;
-    height: 260px;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 0.625rem 1.25rem;
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 0.25rem;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    font-size: 0.875rem;
-    position: relative;
-}
-
-.btn-primary {
-    background: #3b82f6;
-    color: #ffffff;
-    border: 1px solid #3b82f6;
-}
-
-.btn-primary:hover {
-    background: #2563eb;
-    border-color: #2563eb;
-}
-
-.btn-secondary {
-    background: transparent;
-    color: #374151;
-    border: 1px solid #d1d5db;
-}
-
-.btn-secondary:hover {
-    background: #f8fafc;
-    border-color: #3b82f6;
-    color: #3b82f6;
-}
-
-/* Sections - Minimal spacing */
-section {
-    padding: 2.5rem 0;
-}
-
-.research {
+/* === Publications - 重要会议用浅紫色 === */
+.publications .container,
+.talks .container,
+.experience .container,
+.education .container,
+.awards .container {
     background: #ffffff;
 }
 
-.research-summary {
-    max-width: 950px;
-    font-size: 1.125rem;
-    line-height: 1.7;
-    color: #374151;
-    text-align: justify;
+.pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.research-summary p {
-    margin-bottom: 1.5rem;
+.pub {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
 }
 
-.research-summary a {
-    color: #3b82f6;
-    text-decoration: none;
-    font-weight: 500;
+.pub:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
-.research-summary a:hover {
-    text-decoration: underline;
-}
-
-/* Publications - Clean and minimal */
-.publications {
-    background: #f8fafc;
-}
-
-.publication-list {
-    margin-bottom: 2rem;
-}
-
-.publication {
-    background: #ffffff;
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #e2e8f0;
-    transition: all 0.3s ease;
-}
-
-.publication:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+.pub-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.625rem;
 }
 
 .pub-venue {
-    display: inline-block;
-    background: #3b82f6;
-    color: #ffffff;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.25rem;
-    font-size: 0.875rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8125rem;
     font-weight: 500;
-    margin-bottom: 0.75rem;
+    color: #666;
+    padding: 0.25rem 0.625rem;
+    background: #f5f5f5;
+    border-radius: 3px;
+}
+
+/* 顶级会议 - 浅紫色标注 */
+.pub-venue.top-venue {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(139, 92, 246, 0.2);
+}
+
+.pub-pdf {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8125rem;
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1px;
+    transition: all 0.2s;
+}
+
+.pub-pdf:hover {
+    color: #8b5cf6;
+    border-bottom-color: #8b5cf6;
 }
 
 .pub-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #0f172a;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.375rem;
+    color: #1a1a1a;
+}
+
+.pub-conference {
+    font-size: 0.875rem;
+    font-style: italic;
+    color: #8b5cf6;
     margin-bottom: 0.5rem;
-    line-height: 1.3;
+    font-weight: 500;
 }
 
 .pub-authors {
-    color: #64748b;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: #666;
 }
 
 .pub-authors strong {
-    color: #1e293b;
-    font-weight: 600;
-}
-
-.pub-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.pub-link {
-    color: #3b82f6;
-    text-decoration: none;
-    font-size: 0.875rem;
+    color: #1a1a1a;
     font-weight: 500;
 }
 
-.pub-link:hover {
-    text-decoration: underline;
+/* === Experience / Education - 紧凑清晰 === */
+.exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
-.pub-status {
-    color: #64748b;
-    font-size: 0.875rem;
-    font-style: italic;
+.exp-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1.5rem;
+    align-items: start;
 }
 
-.talks-section {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #e2e8f0;
+.exp-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #666;
+    padding-top: 0.125rem;
 }
 
-/* Experience */
-.experience {
-    background: #ffffff;
-}
-
-.timeline {
-    position: relative;
-    padding-left: 2rem;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(180deg, #3b82f6, #e2e8f0);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 2rem;
-    padding-left: 2rem;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -2rem;
-    top: 0.5rem;
-    width: 1rem;
-    height: 1rem;
-    background: #3b82f6;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 0 0 4px #ffffff, 0 0 0 6px #3b82f6;
-}
-
-.timeline-date {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.875rem;
+.exp-content h3 {
+    font-size: 1rem;
     font-weight: 600;
-    color: #3b82f6;
-    margin-bottom: 0.5rem;
-}
-
-.timeline-content h3 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #1e293b;
+    color: #1a1a1a;
     margin-bottom: 0.25rem;
 }
 
-.timeline-org {
-    color: #64748b;
-    font-weight: 500;
+.exp-content p {
+    font-size: 0.9375rem;
+    color: #666;
+    line-height: 1.4;
 }
 
-.education {
-    margin-top: 3rem;
-    padding-top: 3rem;
-    border-top: 2px solid #e2e8f0;
-}
-
-.achievements {
-    margin-top: 3rem;
-    padding-top: 3rem;
-    border-top: 2px solid #e2e8f0;
-}
-
-.awards-grid {
+/* === Awards - 浅紫色徽章 === */
+.awards-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.875rem;
 }
 
 .award-item {
     display: flex;
     align-items: baseline;
     gap: 1rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid #e2e8f0;
 }
 
-.award-item:last-child {
-    border-bottom: none;
-}
-
-.award-item h4 {
-    font-size: 1rem;
+.award-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
     font-weight: 600;
-    color: #3b82f6;
-    min-width: 120px;
-    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    min-width: 80px;
+    text-align: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(139, 92, 246, 0.2);
 }
 
 .award-item p {
-    color: #374151;
-    font-size: 0.95rem;
+    font-size: 0.9375rem;
+    color: #333;
     line-height: 1.4;
-    margin: 0;
 }
 
-/* Contact - Minimal and clean */
-.contact {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    color: #ffffff;
-    padding: 2.5rem 0;
+/* === Contact - 浅色背景 === */
+.contact .container {
+    background: #f8f8f8;
+    border: 1px solid #e5e5e5;
 }
 
-.contact .section-title {
-    color: #ffffff;
-}
-
-.contact .section-title::after {
-    background: #60a5fa;
-}
-
-.contact-intro {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: #e2e8f0;
-    margin-bottom: 2rem;
-    max-width: 600px;
-}
-
-.contact-methods {
+.contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.75rem;
 }
 
-.contact-item {
-    display: block;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    text-decoration: none;
-    color: #ffffff;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.contact-grid > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.contact-item:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-}
-
-.contact-item strong {
-    display: block;
-    font-size: 1rem;
+.contact-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #666;
     font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #60a5fa;
 }
 
-.contact-item span {
-    color: #e2e8f0;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.875rem;
+.contact-grid a {
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+    display: inline-block;
+    transition: all 0.2s;
+    font-size: 0.9375rem;
 }
 
-/* Footer */
-.footer {
-    background: #0f172a;
-    color: #94a3b8;
-    padding: 1rem 0;
-    text-align: center;
+.contact-grid a:hover {
+    color: #8b5cf6;
+    border-bottom-color: #8b5cf6;
 }
 
-.footer p {
-    font-size: 0.875rem;
-}
-
-/* Responsive Design */
+/* === Responsive === */
 @media (max-width: 768px) {
-    .nav-container {
-        padding: 0 1rem;
+    .container {
+        padding: 2rem 1.5rem;
     }
     
-    .nav-links {
-        gap: 1rem;
+    .hero .container {
+        padding-bottom: 2rem;
     }
     
-    .nav-links a {
-        font-size: 0.875rem;
+    .hero-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
     }
     
-    .hero {
-        padding: 4rem 0 2rem;
-    }
-    
-    .hero-content {
-        grid-template-columns: 1fr;
+    .hero-info {
         text-align: center;
-        gap: 2rem;
     }
     
     .profile-photo {
-        width: 180px;
-        height: 180px;
+        width: 120px;
+        height: 120px;
+        order: -1;  /* 移动端照片显示在上方 */
     }
     
-    .profile-photo-large {
-        width: 200px;
-        height: 200px;
+    .name {
+        font-size: 1.75rem;
     }
     
-    .hero-quick-links {
-        justify-content: center;
-        flex-wrap: wrap;
+    .bio {
+        font-size: 1rem;
+        margin-top: 1.5rem;
     }
     
-    .container {
-        padding: 0 1rem;
+    .section-title {
+        font-size: 1.25rem;
     }
     
-    section {
-        padding: 2rem 0;
+    .exp-item {
+        grid-template-columns: 1fr;
+        gap: 0.375rem;
     }
     
-    .timeline {
-        padding-left: 1rem;
+    .exp-date {
+        font-size: 0.75rem;
     }
     
-    .timeline-item {
-        padding-left: 1.5rem;
+    .pub-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
     
     .award-item {
@@ -583,53 +394,39 @@ section {
         gap: 0.5rem;
     }
     
-    .award-item h4 {
+    .award-badge {
         min-width: auto;
     }
     
-    .contact-methods {
+    .contact-grid {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-name {
-        font-size: 2rem;
+    .container {
+        padding: 1.5rem 1rem;
     }
     
-    .section-title {
-        font-size: 1.5rem;
+    .pub-title {
+        font-size: 1rem;
     }
     
-    .publication {
-        padding: 1rem;
-    }
-    
-    .contact-item {
-        padding: 1rem;
+    .profile-photo {
+        width: 110px;
+        height: 110px;
     }
 }
 
-/* Focus States for Accessibility */
-.btn:focus,
-.nav-links a:focus,
-.contact-item:focus {
-    outline: 2px solid #3b82f6;
+/* === Focus States === */
+a:focus-visible {
+    outline: 2px solid #8b5cf6;
     outline-offset: 2px;
 }
 
-/* Animation Classes */
-.fade-in {
-    animation: fadeIn 0.6s ease forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* === Selection === */
+::selection {
+    background: #8b5cf6;
+    color: #ffffff;
 }
