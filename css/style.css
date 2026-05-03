@@ -1,432 +1,149 @@
-/* 
- * Minimal Academic Portfolio
- * 内容居中，两边留白，重要信息浅紫色标注
- */
-
-/* === Reset === */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+:root {
+    --text: #1f2328;
+    --muted: #5d646f;
+    --light: #8a919c;
+    --line: #d8dee4;
+    --soft-line: #eef1f4;
+    --blue: #6d3fb3;
 }
 
 html {
-    font-size: 16px;
+    font-size: 15px;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'IBM Plex Sans', -apple-system, system-ui, sans-serif;
-    line-height: 1.6;
-    color: #1a1a1a;
-    background: #fafafa;
+    color: var(--text);
+    background: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
 }
 
-/* === Layout - 内容在中间，两边自然留白 === */
+a {
+    color: var(--blue);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
 .container {
-    max-width: 50rem;
+    width: min(860px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 3rem 3rem;  /* 明确指定左右padding相同 */
-    background: #ffffff;
+    padding: 44px 0 56px;
+}
+
+h1 {
+    color: var(--blue);
+    font-size: 2.05rem;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: var(--blue);
+    font-size: 1.34rem;
+    line-height: 1.2;
+    margin: 24px 0 8px;
+    border-bottom: 1px solid var(--line);
+}
+
+p,
+li {
+    font-size: 0.98rem;
+}
+
+section p {
+    margin: 6px 0;
+}
+
+.intro {
+    margin-top: 20px;
+}
+
+ul {
+    margin: 6px 0 0 22px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 142px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+}
+
+.profile img {
+    width: 142px;
+    height: 142px;
+    object-fit: cover;
+}
+
+.profile-info {
+    padding-top: 1px;
+}
+
+.profile-info p {
+    margin: 0 0 8px;
 }
 
 section {
-    padding: 0;
-    margin-bottom: 1.5rem;
+    scroll-margin-top: 18px;
 }
 
-/* 让内容区域有明显的中间感 */
-section .container {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+.publication {
+    margin: 13px 0 16px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid var(--soft-line);
 }
 
-/* === Typography === */
-.name {
-    font-family: 'IBM Plex Serif', Georgia, serif;
-    font-size: clamp(2rem, 4vw, 2.75rem);
-    font-weight: 600;
-    line-height: 1.15;
-    margin-bottom: 0.375rem;
-    letter-spacing: -0.02em;
-    color: #1a1a1a;
+.publication:last-child {
+    border-bottom: 0;
 }
 
-.affiliation {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #666;
+.paper-title {
+    color: var(--text);
+    font-weight: 700;
 }
 
-.bio {
-    font-size: 1.0625rem;
-    line-height: 1.7;
-    color: #333;
-    margin-top: 2rem;
-    width: 100%;
+.pub-tag {
+    color: var(--blue);
+    white-space: nowrap;
 }
 
-.bio p {
-    margin: 0 0 1rem 0;  /* 明确设置左右margin为0 */
-    padding: 0;
-    text-align: left;
-}
+@media (max-width: 620px) {
+    html {
+        font-size: 14.5px;
+    }
 
-.bio p:last-child {
-    margin-bottom: 0;
-}
-
-.bio a {
-    color: #8b5cf6;
-    text-decoration: none;
-    border-bottom: 1px solid #c4b5fd;
-    transition: border-color 0.2s;
-}
-
-.bio a:hover {
-    border-bottom-color: #8b5cf6;
-}
-
-.bio strong {
-    color: #1a1a1a;
-    font-weight: 600;
-}
-
-.section-title {
-    font-family: 'IBM Plex Serif', Georgia, serif;
-    font-size: 1.375rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.01em;
-    color: #1a1a1a;
-}
-
-/* === Hero - 名字在左，照片在右 === */
-.hero .container {
-    border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 2.5rem;
-}
-
-.hero-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    margin-bottom: 0;
-}
-
-.hero-info {
-    flex: 1;
-    min-width: 0;  /* 防止flex子项溢出 */
-}
-
-.profile-photo {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #f5f3ff;
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
-    flex-shrink: 0;
-}
-
-/* === Publications - 重要会议用浅紫色 === */
-.publications .container,
-.talks .container,
-.experience .container,
-.education .container,
-.awards .container {
-    background: #ffffff;
-}
-
-.pub-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.pub {
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.pub:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.pub-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.625rem;
-}
-
-.pub-venue {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8125rem;
-    font-weight: 500;
-    color: #666;
-    padding: 0.25rem 0.625rem;
-    background: #f5f5f5;
-    border-radius: 3px;
-}
-
-/* 顶级会议 - 浅紫色标注 */
-.pub-venue.top-venue {
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-    color: #ffffff;
-    font-weight: 600;
-    box-shadow: 0 2px 4px rgba(139, 92, 246, 0.2);
-}
-
-.pub-pdf {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8125rem;
-    color: #666;
-    text-decoration: none;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 1px;
-    transition: all 0.2s;
-}
-
-.pub-pdf:hover {
-    color: #8b5cf6;
-    border-bottom-color: #8b5cf6;
-}
-
-.pub-title {
-    font-size: 1.0625rem;
-    font-weight: 600;
-    line-height: 1.4;
-    margin-bottom: 0.375rem;
-    color: #1a1a1a;
-}
-
-.pub-conference {
-    font-size: 0.875rem;
-    font-style: italic;
-    color: #8b5cf6;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.pub-authors {
-    font-size: 0.9375rem;
-    line-height: 1.5;
-    color: #666;
-}
-
-.pub-authors strong {
-    color: #1a1a1a;
-    font-weight: 500;
-}
-
-/* === Experience / Education - 紧凑清晰 === */
-.exp-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.exp-item {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 1.5rem;
-    align-items: start;
-}
-
-.exp-date {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8125rem;
-    font-weight: 500;
-    color: #666;
-    padding-top: 0.125rem;
-}
-
-.exp-content h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 0.25rem;
-}
-
-.exp-content p {
-    font-size: 0.9375rem;
-    color: #666;
-    line-height: 1.4;
-}
-
-/* === Awards - 浅紫色徽章 === */
-.awards-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.875rem;
-}
-
-.award-item {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-}
-
-.award-badge {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    color: #ffffff;
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-    padding: 0.25rem 0.5rem;
-    border-radius: 3px;
-    min-width: 80px;
-    text-align: center;
-    flex-shrink: 0;
-    box-shadow: 0 2px 4px rgba(139, 92, 246, 0.2);
-}
-
-.award-item p {
-    font-size: 0.9375rem;
-    color: #333;
-    line-height: 1.4;
-}
-
-/* === Contact - 浅色背景 === */
-.contact .container {
-    background: #f8f8f8;
-    border: 1px solid #e5e5e5;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.75rem;
-}
-
-.contact-grid > div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.contact-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.6875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #666;
-    font-weight: 600;
-}
-
-.contact-grid a {
-    color: #1a1a1a;
-    text-decoration: none;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 2px;
-    display: inline-block;
-    transition: all 0.2s;
-    font-size: 0.9375rem;
-}
-
-.contact-grid a:hover {
-    color: #8b5cf6;
-    border-bottom-color: #8b5cf6;
-}
-
-/* === Responsive === */
-@media (max-width: 768px) {
     .container {
-        padding: 2rem 1.5rem;
+        width: calc(100% - 28px);
+        padding-top: 30px;
     }
-    
-    .hero .container {
-        padding-bottom: 2rem;
-    }
-    
-    .hero-header {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-    
-    .hero-info {
-        text-align: center;
-    }
-    
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-        order: -1;  /* 移动端照片显示在上方 */
-    }
-    
-    .name {
-        font-size: 1.75rem;
-    }
-    
-    .bio {
-        font-size: 1rem;
-        margin-top: 1.5rem;
-    }
-    
-    .section-title {
-        font-size: 1.25rem;
-    }
-    
-    .exp-item {
-        grid-template-columns: 1fr;
-        gap: 0.375rem;
-    }
-    
-    .exp-date {
-        font-size: 0.75rem;
-    }
-    
-    .pub-meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-    
-    .award-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-    
-    .award-badge {
-        min-width: auto;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
-    }
-}
 
-@media (max-width: 480px) {
-    .container {
-        padding: 1.5rem 1rem;
+    h1 {
+        font-size: 1.9rem;
     }
-    
-    .pub-title {
-        font-size: 1rem;
-    }
-    
-    .profile-photo {
-        width: 110px;
-        height: 110px;
-    }
-}
 
-/* === Focus States === */
-a:focus-visible {
-    outline: 2px solid #8b5cf6;
-    outline-offset: 2px;
-}
+    .profile {
+        grid-template-columns: 76px minmax(0, 1fr);
+        gap: 14px;
+    }
 
-/* === Selection === */
-::selection {
-    background: #8b5cf6;
-    color: #ffffff;
+    .profile img {
+        width: 76px;
+        height: 76px;
+    }
+
 }

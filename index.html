@@ -3,236 +3,112 @@
 <head>
     <meta charset="utf-8">
     <title>Zhiwei Lin</title>
-    <meta name="description" content="Zhiwei Lin - Security Researcher at National University of Singapore">
+    <meta name="description" content="Zhiwei Lin - Security Researcher">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 
 <body>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-header">
-                <div class="hero-info">
-                    <h1 class="name">Zhiwei Lin</h1>
-                    <p class="affiliation">National University of Singapore</p>
-                </div>
-                <img src="src/zhiwei.jpg" alt="Zhiwei Lin" class="profile-photo">
+    <main class="container">
+        <header class="profile">
+            <img src="src/zhiwei.jpg" alt="Zhiwei Lin">
+            <div class="profile-info">
+                <h1>Zhiwei Lin</h1>
+                <p>Security Engineer, Ant Group</p>
+                <p>Previously at CURIOSITY Lab, National University of Singapore</p>
+                <p>Email: <a href="mailto:zhiweil@u.nus.edu">zhiweil@u.nus.edu</a></p>
+                <p>
+                    <a href="https://scholar.google.com/citations?user=2n8YOqoAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a> /
+                    <a href="https://github.com/Snakinya" target="_blank">GitHub</a> /
+                    <a href="https://www.snakin.top" target="_blank">Blog</a>
+                </p>
             </div>
-            <div class="bio">
-                <p>I'm currently advised by <a href="https://www.comp.nus.edu.sg/~liangzk/" target="_blank">Prof. Zhenkai Liang</a> at <strong>National University of Singapore</strong>. My research focuses on <strong>AI for Security</strong>, <strong>Network Security</strong>, and <strong>Program Analysis</strong>, with particular emphasis on vulnerability discovery and exploitation techniques.</p>
-                <p>I'm also a core member of the CTF team <strong>0x401</strong>, where I compete in cybersecurity challenges and develop practical skills in vulnerability research.</p>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Publications -->
-    <section id="publications" class="publications">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            
-            <div class="pub-list">
+        <section class="intro">
+            <p>
+                I work on AI for Security, Network Security, and Program Analysis, with recent research on vulnerability discovery, software supply chain security, and CDN security. I was advised by <a href="https://www.comp.nus.edu.sg/~liangzk/" target="_blank">Prof. Zhenkai Liang</a> at National University of Singapore, and I am also a core member of CTF team <strong>0x401</strong>.
+            </p>
+        </section>
 
-                
-                <div class="pub">
-                    <div class="pub-meta">
-                        <span class="pub-venue top-venue">ASE 2025</span>
-                        <a href="https://arxiv.org/abs/2506.23474" target="_blank" class="pub-pdf">PDF</a>
-                    </div>
-                    <h3 class="pub-title">A Large-Scale Evolvable Dataset for Model Context Protocol Ecosystem and Security Analysis</h3>
-                    <p class="pub-conference">40th IEEE/ACM International Conference on Automated Software Engineering, Tool Demonstrations</p>
-                    <p class="pub-authors"><strong>Zhiwei Lin</strong>, Bonan Ruan, Jiahao Liu, Weibo Zhao</p>
-                </div>
-                
-                <div class="pub">
-                    <div class="pub-meta">
-                        <span class="pub-venue top-venue">ASE 2025</span>
-                        <a href="https://arxiv.org/abs/2506.01342" target="_blank" class="pub-pdf">PDF</a>
-                    </div>
-                    <h3 class="pub-title">Propagation-Based Vulnerability Impact Assessment for Software Supply Chains</h3>
-                    <p class="pub-conference">40th IEEE/ACM International Conference on Automated Software Engineering</p>
-                    <p class="pub-authors">Bonan Ruan, <strong>Zhiwei Lin</strong>, Jiahao Liu, Chuqi Zhang, Kaihang Ji, Zhenkai Liang</p>
-                </div>
+        <section id="news">
+            <h2>News</h2>
+            <ul>
+                <li><strong>2025.7</strong> Joined Ant Group as a Security Engineer.</li>
+                <li><strong>2025</strong> Two papers accepted by ASE 2025.</li>
+                <li><strong>2025</strong> Presented CDN Cannon at Black Hat Asia 2025.</li>
+                <li><strong>2024</strong> CDN Cannon accepted by USENIX Security 2024.</li>
+            </ul>
+        </section>
 
-                <div class="pub">
-                    <div class="pub-meta">
-                        <span class="pub-venue top-venue">USENIX Security 2024</span>
-                        <a href="https://www.usenix.org/system/files/usenixsecurity24-lin-ziyu.pdf" target="_blank" class="pub-pdf">PDF</a>
-                    </div>
-                    <h3 class="pub-title">CDN Cannon: Exploiting CDN Back-to-Origin Strategies for Amplification Attacks</h3>
-                    <p class="pub-conference">33th USENIX Security Symposium</p>
-                    <p class="pub-authors">Ziyu Lin, <strong>Zhiwei Lin</strong>, Ximeng Liu, Jianjun Chen, Run Guo, Cheng Chen, Shaodong Xiao</p>
-                </div>
+        <section id="publications">
+            <h2>Publications</h2>
 
-                <div class="pub">
-                    <div class="pub-meta">
-                        <span class="pub-venue">arXiv</span>
-                        <a href="https://arxiv.org/pdf/2409.01887" target="_blank" class="pub-pdf">PDF</a>
-                    </div>
-                    <h3 class="pub-title">Detecting and Measuring Security Implications of Entangled Domain Verification in CDN</h3>
-                    <p class="pub-conference">Preprint</p>
-                    <p class="pub-authors">Ziyu Lin, <strong>Zhiwei Lin</strong>, Run Guo, Jianjun Chen, Mingming Zhang, Ximeng Liu, Tianhao Yang, Zhuoran Cao, Robert H. Deng</p>
-                </div>
+            <div class="publication">
+                <p class="paper-title"><span class="pub-tag">[ASE'25]</span> A Large-Scale Evolvable Dataset for Model Context Protocol Ecosystem and Security Analysis</p>
+                <p><strong>Zhiwei Lin</strong>, Bonan Ruan, Jiahao Liu, Weibo Zhao</p>
+                <p>40th IEEE/ACM International Conference on Automated Software Engineering, Tool Demonstrations, 2025. [<a href="https://arxiv.org/abs/2506.23474" target="_blank">PDF</a>]</p>
             </div>
 
-        </div>
-    </section>
-
-    <!-- Talks -->
-    <section class="talks">
-        <div class="container">
-            <h2 class="section-title">Talks</h2>
-            <div class="pub-list">
-                <div class="pub">
-                    <div class="pub-meta">
-                        <span class="pub-venue top-venue">Black Hat Asia 2025</span>
-                        <a href="https://www.blackhat.com/asia-25/briefings/schedule/index.html#cdn-cannon-exploiting-cdn-back-to-origin-strategies-for-amplification-attacks-43932" target="_blank" class="pub-pdf">Link</a>
-                    </div>
-                    <h3 class="pub-title">CDN Cannon: Exploiting CDN Back-to-Origin Strategies for Amplification Attacks</h3>
-                    <p class="pub-authors"><strong>Zhiwei Lin</strong>, Ziyu Lin</p>
-                </div>
+            <div class="publication">
+                <p class="paper-title"><span class="pub-tag">[ASE'25]</span> Propagation-Based Vulnerability Impact Assessment for Software Supply Chains</p>
+                <p>Bonan Ruan, <strong>Zhiwei Lin</strong>, Jiahao Liu, Chuqi Zhang, Kaihang Ji, Zhenkai Liang</p>
+                <p>40th IEEE/ACM International Conference on Automated Software Engineering, 2025. [<a href="https://arxiv.org/abs/2506.01342" target="_blank">PDF</a>]</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Experience -->
-    <section class="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            
-            <div class="exp-list">
-
-                <div class="exp-item">
-                    <span class="exp-date">2025.7 - Present</span>
-                    <div class="exp-content">
-                        <h3>Security Engineer</h3>
-                        <p>Ant Group</p>
-                    </div>
-                </div>
-
-                <div class="exp-item">
-                    <span class="exp-date">2024.8 - 2025.6</span>
-                    <div class="exp-content">
-                        <h3>Research Assistant</h3>
-                        <p>CURIOSITY Lab, National University of Singapore</p>
-                    </div>
-                </div>
-                
-                <div class="exp-item">
-                    <span class="exp-date">2024.5 - 2024.8</span>
-                    <div class="exp-content">
-                        <h3>Security Engineering Intern</h3>
-                        <p>Ant Group</p>
-                    </div>
-                </div>
-                
-                <div class="exp-item">
-                    <span class="exp-date">2024.1 - 2024.5</span>
-                    <div class="exp-content">
-                        <h3>Research Intern</h3>
-                        <p>CURIOSITY Lab, National University of Singapore</p>
-                    </div>
-                </div>
-                
-                <div class="exp-item">
-                    <span class="exp-date">2023.8 - 2023.10</span>
-                    <div class="exp-content">
-                        <h3>Security Research Intern</h3>
-                        <p>QI-ANXIN Technology</p>
-                    </div>
-                </div>
-                
-                <div class="exp-item">
-                    <span class="exp-date">2023.3 - 2023.10</span>
-                    <div class="exp-content">
-                        <h3>Research Intern</h3>
-                        <p>NISL, Tsinghua University</p>
-                    </div>
-                </div>
+            <div class="publication">
+                <p class="paper-title"><span class="pub-tag">[USENIX Security'24]</span> CDN Cannon: Exploiting CDN Back-to-Origin Strategies for Amplification Attacks</p>
+                <p>Ziyu Lin, <strong>Zhiwei Lin</strong>, Ximeng Liu, Jianjun Chen, Run Guo, Cheng Chen, Shaodong Xiao</p>
+                <p>33rd USENIX Security Symposium, 2024. [<a href="https://www.usenix.org/system/files/usenixsecurity24-lin-ziyu.pdf" target="_blank">PDF</a>]</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Education -->
-    <section class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="exp-list">
-                <div class="exp-item">
-                    <span class="exp-date">2024.8 - 2025.6</span>
-                    <div class="exp-content">
-                        <h3>Master of Computing</h3>
-                        <p>National University of Singapore</p>
-                    </div>
-                </div>
-                
-                <div class="exp-item">
-                    <span class="exp-date">2020.9 - 2024.7</span>
-                    <div class="exp-content">
-                        <h3>Bachelor of Engineering</h3>
-                        <p>Sichuan University</p>
-                    </div>
-                </div>
+            <div class="publication">
+                <p class="paper-title"><span class="pub-tag">[arXiv'24]</span> Detecting and Measuring Security Implications of Entangled Domain Verification in CDN</p>
+                <p>Ziyu Lin, <strong>Zhiwei Lin</strong>, Run Guo, Jianjun Chen, Mingming Zhang, Ximeng Liu, Tianhao Yang, Zhuoran Cao, Robert H. Deng</p>
+                <p>arXiv preprint, 2024. [<a href="https://arxiv.org/pdf/2409.01887" target="_blank">PDF</a>]</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Awards -->
-    <section class="awards">
-        <div class="container">
-            <h2 class="section-title">Awards</h2>
-            <div class="awards-list">
-                <div class="award-item">
-                    <span class="award-badge">1st Prize</span>
-                    <p>2023 National College Student Information Security Contest (CTF)</p>
-                </div>
-                <div class="award-item">
-                    <span class="award-badge">Champion</span>
-                    <p>2022 Anxun Cup CTF (National Finals)</p>
-                </div>
-                <div class="award-item">
-                    <span class="award-badge">3rd Prize</span>
-                    <p>2022 D³CTF (International)</p>
-                </div>
-                <div class="award-item">
-                    <span class="award-badge">CVE</span>
-                    <p>CVE-2023-51770, CVE-2023-46227, CVE-2023-41578, CVE-2023-42268</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section id="talks">
+            <h2>Talks</h2>
+            <ul>
+                <li>
+                    <strong>CDN Cannon: Exploiting CDN Back-to-Origin Strategies for Amplification Attacks</strong>,
+                    Black Hat Asia 2025. [<a href="https://www.blackhat.com/asia-25/briefings/schedule/index.html#cdn-cannon-exploiting-cdn-back-to-origin-strategies-for-amplification-attacks-43932" target="_blank">Link</a>]
+                </li>
+            </ul>
+        </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div>
-                    <span class="contact-label">Email</span>
-                    <a href="mailto:zhiweil@u.nus.edu">zhiweil@u.nus.edu</a>
-                </div>
-                <div>
-                    <span class="contact-label">GitHub</span>
-                    <a href="https://github.com/Snakinya" target="_blank">@Snakinya</a>
-                </div>
-                <div>
-                    <span class="contact-label">Blog</span>
-                    <a href="https://www.snakin.top" target="_blank">snakin.top</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>2025.7 - Present</strong>, Security Engineer, Ant Group.</li>
+                <li><strong>2024.8 - 2025.6</strong>, Research Assistant, CURIOSITY Lab, National University of Singapore.</li>
+                <li><strong>2024.5 - 2024.8</strong>, Security Engineering Intern, Ant Group.</li>
+                <li><strong>2024.1 - 2024.5</strong>, Research Intern, CURIOSITY Lab, National University of Singapore.</li>
+                <li><strong>2023.8 - 2023.10</strong>, Security Research Intern, QI-ANXIN Technology.</li>
+                <li><strong>2023.3 - 2023.10</strong>, Research Intern, NISL, Tsinghua University.</li>
+            </ul>
+        </section>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>2024.8 - 2025.6</strong>, Master of Computing, National University of Singapore.</li>
+                <li><strong>2020.9 - 2024.7</strong>, Bachelor of Engineering, Sichuan University.</li>
+            </ul>
+        </section>
+
+        <section id="awards">
+            <h2>Awards and CVEs</h2>
+            <ul>
+                <li>2023 National College Student Information Security Contest, 1st Prize.</li>
+                <li>2022 Anxun Cup CTF National Finals, Champion.</li>
+                <li>2022 D3CTF International Finals, 3rd Prize.</li>
+                <li>CVE-2023-51770, CVE-2023-46227, CVE-2023-41578, CVE-2023-42268.</li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
